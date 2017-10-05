@@ -15,7 +15,6 @@ class BooksApp extends Component {
         //make the API call to get the books on the shelf
         BooksAPI.getAll()
         .then(books => {
-        	console.log(books);
         	this.setState({books})
         })
         .catch(error => console.log(error));
@@ -43,7 +42,7 @@ class BooksApp extends Component {
     	}
     	//update the database with updated info.
     	BooksAPI.update(shelfBook, currentBook.shelf)
-    	.then(() => console.log('book updated'));
+    	.then(() => console.log('bookshelf updated'));
     };
 
 	render() {
